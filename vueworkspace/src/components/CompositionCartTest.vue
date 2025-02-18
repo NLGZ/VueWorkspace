@@ -26,18 +26,18 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 // 상품 목록
 const items = ref([]);
-const totalPrice = ref();
 
-// 새 상품 입력값
+// 상품 입력값
 const newItem = ref({
   name: "",
   price: 0,
   quantity: 0,
 });
+
 const addItem = () => {
     items.value.push({
         name: newItem.value.name,
@@ -45,13 +45,23 @@ const addItem = () => {
         quantity: 1,
     });
 };
-
+// 갯수 추가
 const increase = (index) => {
   items.value[index].quantity++;
 };
+//갯수 빼기
 const decrease = (index) => {
+    if (items.value[index].quantity === 0) {
+        alert("음수는 안돼요");
+        return; 
+    }
     items.value[index].quantity--;
 };
+
+//총액 계산
+const totalPrice = computed(() =>
+  items.value.reduce((sum, item) => sum + item.price * item.quantity, 0)
+);
 
 
 </script>

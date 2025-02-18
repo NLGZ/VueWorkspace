@@ -2,13 +2,15 @@
 <div>
   <img alt="Vue logo" src="./assets/logo.png">
   <!-- <compositionVue /> -->
-  <cartTest />
+  <!-- <CompositionCartTest /> -->
+  <OptionsCartTest />
   </div>
 </template>
 
 <script setup>
 // import CompositionVue from './components/CompositionVue.vue'
-import cartTest from './components/CartTest.vue'
+// import CompositionCartTest from './components/CompositionCartTest.vue'
+import OptionsCartTest from './components/OptionsCartTest.vue'
 
 </script>
 
