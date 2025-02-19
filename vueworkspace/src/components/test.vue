@@ -15,7 +15,7 @@
     <!-- 상품 목록 -->
     <div v-for="(item, index) in items" :key="index" class="item-box">
       <div>
-        <strong>{{ item.name }}</strong> : {{ item.price}}원
+        <strong>{{ item.name }}</strong> : {{ item.price }}원
         <span> 수량 </span>
         <button class="btn" @click="decreaseQty(index)">-</button>
         {{ item.quantity }}
@@ -39,16 +39,15 @@ const newItem = ref({
 
 // 상품 추가 함수
 const addItem = () => {
- 
   items.value.push({
     name: newItem.value.name,
     price: newItem.value.price,
     quantity: 1,
   });
 
-//   // 입력값 초기화
-//   newItem.value.name = "";
-//   newItem.value.price = 0;
+  //   // 입력값 초기화
+  //   newItem.value.name = "";
+  //   newItem.value.price = 0;
 };
 
 // 수량 증가
