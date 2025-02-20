@@ -1,21 +1,30 @@
 <template>
 <div>
   <img alt="Vue logo" src="./assets/logo.png">
+    <Header />
+    <router-view /> 
   <!-- <compositionVue /> -->
-  <!-- <CompositionCartTest /> -->
+  <CompositionCartTest />
   <!-- <OptionsCartTest /> -->
   <!-- <ParentView /> -->
+   <BoardList /> 
   <ModalComponent />
+  
   </div>
 </template>
 
 <script setup>
 // import CompositionVue from './components/CompositionVue.vue'
-// import CompositionCartTest from './components/CompositionCartTest.vue'
+import CompositionCartTest from './components/CompositionCartTest.vue'
 // import OptionsCartTest from './components/OptionsCartTest.vue'
 // import liveTest from './components/LifecycleExample.vue'
   // import ParentView  from "./components/ParentView.vue";
-  import ModalComponent from "./components/ModalComponent.vue";
+  // import ModalComponent from "./components/ModalComponent.vue";
+import Header from "./components/HeaderApp.vue";
+import BoardList from "./components/BoardList.vue"; // ✅ 추가
+
+
+
 </script>
 
 <style>

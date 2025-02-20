@@ -1,12 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen">
-    <!-- 모달 열기 버튼 -->
-    <button @click="modalOpen" class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">
-      Modal
-    </button>
-
-    <!-- 모달 -->
-    <div v-show="modalCheck" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40">
+      <div v-show="modalCheck" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40">
       <div class="bg-white w-[550px] rounded-lg p-6 shadow-lg">
         
         <!-- 모달 내용 -->
@@ -27,9 +20,7 @@
 
       </div>
     </div>
-  </div>
 </template>
-
 <script setup>
 import { ref } from "vue";
 
